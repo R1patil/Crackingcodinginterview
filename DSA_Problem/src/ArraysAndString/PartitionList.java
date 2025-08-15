@@ -12,7 +12,7 @@ public class PartitionList {
 
     private Node head = null;
 
-    // ✅ Add node at end
+    //  Add node at end
     public void add(int value) {
         Node newNode = new Node(value);
         if (head == null) {
@@ -27,7 +27,7 @@ public class PartitionList {
         temp.next = newNode;
     }
 
-    // ✅ Partition around value x
+    //  Partition around value x
     public void partition(int x) {
         Node l1Head = null, l1Tail = null;
         Node l2Head = null, l2Tail = null;
@@ -58,7 +58,7 @@ public class PartitionList {
             current = next;
         }
 
-        // ✅ Connect both lists
+        //  Connect both lists
         if (l1Tail != null) {
             l1Tail.next = l2Head;
             head = l1Head;
@@ -67,7 +67,7 @@ public class PartitionList {
         }
     }
 
-    // ✅ Print the linked list
+    //  Print the linked list
     public void printList() {
         Node temp = head;
         while (temp != null) {
@@ -77,7 +77,7 @@ public class PartitionList {
         System.out.println("NULL");
     }
 
-    // ✅ Demo
+    //  Demo
     public static void main(String[] args) {
         PartitionList list = new PartitionList();
         int[] values = {3, 5, 8, 5, 10, 2, 1};
