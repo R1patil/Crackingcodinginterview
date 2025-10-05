@@ -1,39 +1,35 @@
-# Validate Binary Search Tree (Medium)
+# Construct Binary Tree from Preorder and Inorder Traversal (Medium)
 
 ---
 
-<p>Given the <code>root</code> of a binary tree, <em>determine if it is a valid binary search tree (BST)</em>.</p>
-
-<p>A <strong>valid BST</strong> is defined as follows:</p>
-
-<ul>
-	<li>The left <span data-keyword="subtree">subtree</span> of a node contains only nodes with keys&nbsp;<strong>strictly less than</strong> the node&#39;s key.</li>
-	<li>The right subtree of a node contains only nodes with keys <strong>strictly greater than</strong> the node&#39;s key.</li>
-	<li>Both the left and right subtrees must also be binary search trees.</li>
-</ul>
+<p>Given two integer arrays <code>preorder</code> and <code>inorder</code> where <code>preorder</code> is the preorder traversal of a binary tree and <code>inorder</code> is the inorder traversal of the same tree, construct and return <em>the binary tree</em>.</p>
 
 <p>&nbsp;</p>
 <p><strong class="example">Example 1:</strong></p>
-<img alt="" src="https://assets.leetcode.com/uploads/2020/12/01/tree1.jpg" style="width: 302px; height: 182px;" />
+<img alt="" src="https://assets.leetcode.com/uploads/2021/02/19/tree.jpg" style="width: 277px; height: 302px;" />
 <pre>
-<strong>Input:</strong> root = [2,1,3]
-<strong>Output:</strong> true
+<strong>Input:</strong> preorder = [3,9,20,15,7], inorder = [9,3,15,20,7]
+<strong>Output:</strong> [3,9,20,null,null,15,7]
 </pre>
 
 <p><strong class="example">Example 2:</strong></p>
-<img alt="" src="https://assets.leetcode.com/uploads/2020/12/01/tree2.jpg" style="width: 422px; height: 292px;" />
+
 <pre>
-<strong>Input:</strong> root = [5,1,4,null,null,3,6]
-<strong>Output:</strong> false
-<strong>Explanation:</strong> The root node&#39;s value is 5 but its right child&#39;s value is 4.
+<strong>Input:</strong> preorder = [-1], inorder = [-1]
+<strong>Output:</strong> [-1]
 </pre>
 
 <p>&nbsp;</p>
 <p><strong>Constraints:</strong></p>
 
 <ul>
-	<li>The number of nodes in the tree is in the range <code>[1, 10<sup>4</sup>]</code>.</li>
-	<li><code>-2<sup>31</sup> &lt;= Node.val &lt;= 2<sup>31</sup> - 1</code></li>
+	<li><code>1 &lt;= preorder.length &lt;= 3000</code></li>
+	<li><code>inorder.length == preorder.length</code></li>
+	<li><code>-3000 &lt;= preorder[i], inorder[i] &lt;= 3000</code></li>
+	<li><code>preorder</code> and <code>inorder</code> consist of <strong>unique</strong> values.</li>
+	<li>Each value of <code>inorder</code> also appears in <code>preorder</code>.</li>
+	<li><code>preorder</code> is <strong>guaranteed</strong> to be the preorder traversal of the tree.</li>
+	<li><code>inorder</code> is <strong>guaranteed</strong> to be the inorder traversal of the tree.</li>
 </ul>
 
 
