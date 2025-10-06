@@ -1,50 +1,36 @@
-# Sum Root to Leaf Numbers (Medium)
+# Binary Tree Maximum Path Sum (Hard)
 
 ---
 
-<p>You are given the <code>root</code> of a binary tree containing digits from <code>0</code> to <code>9</code> only.</p>
+<p>A <strong>path</strong> in a binary tree is a sequence of nodes where each pair of adjacent nodes in the sequence has an edge connecting them. A node can only appear in the sequence <strong>at most once</strong>. Note that the path does not need to pass through the root.</p>
 
-<p>Each root-to-leaf path in the tree represents a number.</p>
+<p>The <strong>path sum</strong> of a path is the sum of the node&#39;s values in the path.</p>
 
-<ul>
-	<li>For example, the root-to-leaf path <code>1 -&gt; 2 -&gt; 3</code> represents the number <code>123</code>.</li>
-</ul>
-
-<p>Return <em>the total sum of all root-to-leaf numbers</em>. Test cases are generated so that the answer will fit in a <strong>32-bit</strong> integer.</p>
-
-<p>A <strong>leaf</strong> node is a node with no children.</p>
+<p>Given the <code>root</code> of a binary tree, return <em>the maximum <strong>path sum</strong> of any <strong>non-empty</strong> path</em>.</p>
 
 <p>&nbsp;</p>
 <p><strong class="example">Example 1:</strong></p>
-<img alt="" src="https://assets.leetcode.com/uploads/2021/02/19/num1tree.jpg" style="width: 212px; height: 182px;" />
+<img alt="" src="https://assets.leetcode.com/uploads/2020/10/13/exx1.jpg" style="width: 322px; height: 182px;" />
 <pre>
 <strong>Input:</strong> root = [1,2,3]
-<strong>Output:</strong> 25
-<strong>Explanation:</strong>
-The root-to-leaf path <code>1-&gt;2</code> represents the number <code>12</code>.
-The root-to-leaf path <code>1-&gt;3</code> represents the number <code>13</code>.
-Therefore, sum = 12 + 13 = <code>25</code>.
+<strong>Output:</strong> 6
+<strong>Explanation:</strong> The optimal path is 2 -&gt; 1 -&gt; 3 with a path sum of 2 + 1 + 3 = 6.
 </pre>
 
 <p><strong class="example">Example 2:</strong></p>
-<img alt="" src="https://assets.leetcode.com/uploads/2021/02/19/num2tree.jpg" style="width: 292px; height: 302px;" />
+<img alt="" src="https://assets.leetcode.com/uploads/2020/10/13/exx2.jpg" />
 <pre>
-<strong>Input:</strong> root = [4,9,0,5,1]
-<strong>Output:</strong> 1026
-<strong>Explanation:</strong>
-The root-to-leaf path <code>4-&gt;9-&gt;5</code> represents the number 495.
-The root-to-leaf path <code>4-&gt;9-&gt;1</code> represents the number 491.
-The root-to-leaf path <code>4-&gt;0</code> represents the number 40.
-Therefore, sum = 495 + 491 + 40 = <code>1026</code>.
+<strong>Input:</strong> root = [-10,9,20,null,null,15,7]
+<strong>Output:</strong> 42
+<strong>Explanation:</strong> The optimal path is 15 -&gt; 20 -&gt; 7 with a path sum of 15 + 20 + 7 = 42.
 </pre>
 
 <p>&nbsp;</p>
 <p><strong>Constraints:</strong></p>
 
 <ul>
-	<li>The number of nodes in the tree is in the range <code>[1, 1000]</code>.</li>
-	<li><code>0 &lt;= Node.val &lt;= 9</code></li>
-	<li>The depth of the tree will not exceed <code>10</code>.</li>
+	<li>The number of nodes in the tree is in the range <code>[1, 3 * 10<sup>4</sup>]</code>.</li>
+	<li><code>-1000 &lt;= Node.val &lt;= 1000</code></li>
 </ul>
 
 
